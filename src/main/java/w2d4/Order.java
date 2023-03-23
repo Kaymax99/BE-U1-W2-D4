@@ -13,11 +13,11 @@ public class Order {
 	private Customer customer;
 	
 	
-	public Order(long id, List<Product> l, Customer c) {
+	public Order(long id, String st, LocalDate orDate, LocalDate delDate, List<Product> l, Customer c) {
 		this.id = id;
-		this.status = "Accepted";
-		this.orderDate = LocalDate.now(); 
-		this.deliveryDate = LocalDate.now();
+		this.status = st;
+		this.orderDate = orDate;
+		this.deliveryDate = delDate;
 		this.list = l;
 		this.customer = c;
 	}
@@ -54,7 +54,7 @@ public class Order {
 		this.deliveryDate = deliveryDate;
 	}
 
-	public List<Product> getList() {
+	public List<Product> getProducts() {
 		return list;
 	}
 

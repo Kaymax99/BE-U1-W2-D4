@@ -1,7 +1,13 @@
 package w2d4;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.ToString;
+
+@AllArgsConstructor
+@ToString
+@Getter
 public class Product {
-	
 	private long id;
 	private String name;
 	private String category;
@@ -46,4 +52,12 @@ public class Product {
 		this.price = price;
 	}
 	
+	public String toString() {
+		String res= "Prodotto:";
+		res += "\nNome: " + getName();
+		res += "\nPrezzo: " + getPrice();
+		res += "\nCategoria: " + getCategory() + "\n";
+		return res;
+		
+	}
 }
